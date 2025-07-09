@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enlishing", "Enlishing.csproj", "{BC1934F2-A567-4355-A3B0-54E98B79071A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC1934F2-A567-4355-A3B0-54E98B79071A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1934F2-A567-4355-A3B0-54E98B79071A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1934F2-A567-4355-A3B0-54E98B79071A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1934F2-A567-4355-A3B0-54E98B79071A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDE9F431-6BE7-4380-AE37-E3B8C4F5FBC7}
+	EndGlobalSection
+EndGlobal

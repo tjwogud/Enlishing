@@ -206,6 +206,12 @@ namespace Enlishing
                 Close();
             }
 
+            if (IsPressed(Keys.Q))
+            {
+                win = true;
+                Close();
+            }
+
             Invalidate();
         }
 

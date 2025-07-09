@@ -159,6 +159,7 @@ namespace Enlishing
                             Console.WriteLine("다음 폴더에 던전이 생성되었습니다.");
                             Console.WriteLine(selector.FileName);
                             Process.Start("explorer.exe", selector.FileName);
+                            Console.ReadLine();
                             return true;
                         }
                         contains = x > 61 && x < 98 && y > 25 && y < 33;

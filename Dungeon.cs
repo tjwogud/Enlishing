@@ -85,6 +85,7 @@ namespace Enlishing
             string savePath = Path.Combine(dir, "dungeonSave.sav");
             File.WriteAllText(savePath, JsonConvert.SerializeObject(dungeon));
 
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             byte[] prev = null;
             for (int i = 0; i < floors; i++)
             {
@@ -99,8 +100,8 @@ namespace Enlishing
                 {
                     // 보스
                     zos.PutNextEntry(new ZipEntry($"제 {level + 1}계층/보스 전투.bat"));
-                    string launcher = $"start \"\" conhost.exe cmd.exe /c \"{Environment.ProcessPath}\" battle \"{savePath}\" {level} {0} \"%~dpnx0\"";
-                    var bytes = Encoding.UTF8.GetBytes(launcher);
+                    string launcher = $"start \"\" conhost \"{Environment.ProcessPath}\" battle \"{savePath}\" {level} {0} \"%~dpnx0\"";
+                    var bytes = Encoding.GetEncoding(949).GetBytes(launcher);
                     zos.Write(bytes, 0, bytes.Length);
                     zos.CloseEntry();
                 }
@@ -109,8 +110,8 @@ namespace Enlishing
                     for (int j = 0; j < rooms; j++)
                     {
                         zos.PutNextEntry(new ZipEntry($"제 {level + 1}계층/{j + 1}번 방/전투.bat"));
-                        string launcher = $"start \"\" conhost.exe cmd.exe /c \"{Environment.ProcessPath}\" battle \"{savePath}\" {level} {j} \"%~dpnx0\"";
-                        var bytes = Encoding.UTF8.GetBytes(launcher);
+                        string launcher = $"start \"\" conhost \"{Environment.ProcessPath}\" battle \"{savePath}\" {level} {j} \"%~dpnx0\"";
+                        var bytes = Encoding.GetEncoding(949).GetBytes(launcher);
                         zos.Write(bytes, 0, bytes.Length);
                         zos.CloseEntry();
                     }
